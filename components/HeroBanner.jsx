@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-import { urlFor } from '../lib/client';
+import { urlFor } from "../lib/client";
 
 const HeroBanner = ({ heroBanner }) => {
   return (
@@ -9,8 +9,12 @@ const HeroBanner = ({ heroBanner }) => {
       <div>
         <p className="beats-solo">{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
-        <h1>{heroBanner.largeText1}</h1>
-        <img src={urlFor(heroBanner.image)} alt="headphones" className="hero-banner-image" />
+        <h1 style={{ color: "#f02d34" }}>{heroBanner.largeText1}</h1>
+        <img
+          src={urlFor(heroBanner.image)}
+          alt="headphones"
+          className="hero-banner-image"
+        />
 
         <div>
           <Link href={`/product/${heroBanner.product}`}>
@@ -23,7 +27,7 @@ const HeroBanner = ({ heroBanner }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroBanner
+export default HeroBanner;
